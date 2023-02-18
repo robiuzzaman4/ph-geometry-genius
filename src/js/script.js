@@ -25,7 +25,7 @@ triangleBtn.addEventListener("click", function(e) {
 });
 
 
-// triangle calculation
+// rectangle calculation
 const rectangleBtn = document.getElementById("rectangleBtn");
 rectangleBtn.addEventListener("click", function(e) {
     // get name 
@@ -140,15 +140,13 @@ ellipseBtn.addEventListener("click", function(e) {
 });
 
 
-
+// random background color for hover cards
 const geometryCards = document.getElementsByClassName("geometry-card");
 for (const card of geometryCards) {
-    // rgb color from 'function.js'
-    const rgb = generateRandomColor();
+
     card.addEventListener("mouseover", function() {
+        // rgb color from 'function.js'
+        const rgb = generateRandomColor();
         card.style.backgroundColor = rgb;
-    })
-    card.addEventListener("mouseout", function() {
-        card.style.backgroundColor = "inherit";
-    })
+    });
 }
