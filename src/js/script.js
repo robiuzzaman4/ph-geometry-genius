@@ -143,7 +143,7 @@ ellipseBtn.addEventListener("click", function(e) {
 
 const geometryCards = document.getElementsByClassName("geometry-card");
 for (const card of geometryCards) {
-    const rgb = genrateRandomColor();
+    const rgb = generateRandomColor();
     card.addEventListener("mouseover", function() {
         card.style.backgroundColor = rgb;
     })

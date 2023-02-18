@@ -23,9 +23,9 @@
         </nav>
     </header>
 
-    <main class="max-w-screen-xl mx-auto px-4 py-4 grid grid-cols-1 md:grid-cols-4 gap-4">
+    <main class="max-w-screen-xl mx-auto px-4 py-4 flex flex-col md:flex-row  gap-4">
         <!-- cards section -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:col-span-3">
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 xl:col-span-3 md:w-[65%]">
 
             <!-- triabgle card start -->
             <div class="p-4 rounded-lg border border-gray-200 grid place-items-center gap-4 w-full geometry-card">
@@ -33,7 +33,7 @@
                     <img class="w-full p-2" src="./src/images/triangle.png" alt="triangle picture">
                 </div>
                 <h2 class="text-xl font-bold">Triangle</h2>
-                <p class="text-sm text-gray-800">Area (A) = 0.5 * b * h</p>
+                <p class="text-sm text-gray-800">Area (A) = 0.5 x b x h</p>
                 <div class="flex items-center justify-between gap-1 w-full">
                     <label>
                         <input class="w-2/3 p-2 rounded-lg focus:outline-none bg-gray-100" type="number" placeholder="b" id="triangleBase">
@@ -55,7 +55,7 @@
                     <img class="w-full p-2" src="./src/images/rectangle.png" alt="rectangle picture">
                 </div>
                 <h2 class="text-xl font-bold">Rectangle</h2>
-                <p class="text-sm text-gray-800">Area (A) = w * l</p>
+                <p class="text-sm text-gray-800">Area (A) = w x l</p>
                 <div class="flex items-center justify-between gap-1 w-full">
                     <label>
                         <input id="rectangleWidth" class="w-2/3 p-2 rounded-lg focus:outline-none bg-gray-100" type="number" placeholder="w">
@@ -77,7 +77,7 @@
                     <img class="w-full p-2" src="./src/images/parallelogram.png" alt="parallelogram picture">
                 </div>
                 <h2 class="text-xl font-bold">Parallelogram</h2>
-                <p class="text-sm text-gray-800">Area (A) = b * h</p>
+                <p class="text-sm text-gray-800">Area (A) = b x h</p>
                 <div class="flex items-center justify-between gap-1 w-full">
                     <label>
                         <input id="parallelogramBase" class="w-2/3 p-2 rounded-lg focus:outline-none bg-gray-100" type="number" placeholder="b">
@@ -98,7 +98,7 @@
                     <img class="w-full p-2" src="./src/images/rhombus.png" alt="rhombus picture">
                 </div>
                 <h2 class="text-xl font-bold">Rhombus</h2>
-                <p class="text-sm text-gray-800">Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></p>
+                <p class="text-sm text-gray-800">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
                 <div class="flex items-center justify-between gap-1 w-full">
                     <label>
                         <input id="rhombusDiagonalOne" class="w-2/3 p-2 rounded-lg focus:outline-none bg-gray-100" type="number" placeholder="d1">
@@ -119,7 +119,7 @@
                     <img class="w-full p-2" src="./src/images/pentagon.png" alt="pentagon picture">
                 </div>
                 <h2 class="text-xl font-bold">Pentagon</h2>
-                <p class="text-sm text-gray-800">Area (A) = 0.5 * p * b</p>
+                <p class="text-sm text-gray-800">Area (A) = 0.5 x p x b</p>
                 <div class="flex items-center justify-between gap-1 w-full">
                     <label>
                         <input id="pentagonPerameter" class="w-2/3 p-2 rounded-lg focus:outline-none bg-gray-100" type="number" placeholder="p">
@@ -157,13 +157,13 @@
 
         </section>
 
-        <section class="w-full">
+        <section class="md:w-[35%]">
             <div class="p-4 rounded-lg border border-gray-200 grid place-items-center gap-4 w-full overflow-x-auto">
                 <h2 class="underline text-xl font-bold text-center">Area Calculation</h2>
                 
 
-            <table class="text-sm text-left overflow-x-auto w-full">
-                <tbody class="" id="tableBody">
+            <table class="text-sm text-left overflow-x-auto">
+                <tbody class="flex flex-col items-start justify-between gap-4 w-full overflow-x-auto" id="tableBody">
                         <!-- <td class="py-2 px-4">
                             0
                         </td>
@@ -178,7 +178,7 @@
                         </td> -->
                 </tbody>
             </table>
-
+           
             <!-- <div class="flex items-center gap-4" id="dataContainer">
                 <!-- <p>1.</p>
                 <p>Parallelogram</p>

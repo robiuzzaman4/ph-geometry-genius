@@ -8,17 +8,19 @@ function getInputValue(id) {
 function showCalculation(serial, name, area) {
     const tableBody = document.getElementById("tableBody");
     const tr = document.createElement("tr");
+
+    tr.classList.add("customStyle");
     tr.innerHTML = `
-    <td class="py-2 pl-4">
+    <td class="py-2 "> 
         ${serial}.
     </td>
     <td class="py-2 pr-4">
         ${name}
     </td>
-    <td class="py-2 px-4">
+    <td class="py-2 pr-4">
         ${area}cm<sup>2</sup>
     </td>
-    <td class="py-2 mx-2 px-4 bg-sky-500 rounded-lg text-white text-center">
+    <td class="py-2 px-4 bg-sky-500 rounded-lg text-white text-center cursor-pointer">
         Covert to m<sup>2</sup>
     </td>
     `
@@ -26,7 +28,7 @@ function showCalculation(serial, name, area) {
 }
 
 
-function genrateRandomColor() {
+function generateRandomColor() {
     const red = Math.floor(Math.random() * 255);
     const green = Math.floor(Math.random() * 255);
     const blue = Math.floor(Math.random() * 255);
