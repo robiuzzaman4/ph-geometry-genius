@@ -123,7 +123,7 @@ ellipseBtn.addEventListener("click", function(e) {
     // get name 
     const name = e.target.parentNode.children[1].innerText;
     // get input value
-    const ellipseAxisOfA = getInputValue("ellipseAxisOfA");
+    let ellipseAxisOfA = getInputValue("ellipseAxisOfA");
     const ellipseAxisOfB = getInputValue("ellipseAxisOfB");
     // checking this value
     if (ellipseAxisOfA <= 0 || ellipseAxisOfA === "" ||
@@ -143,11 +143,12 @@ ellipseBtn.addEventListener("click", function(e) {
 
 const geometryCards = document.getElementsByClassName("geometry-card");
 for (const card of geometryCards) {
+    // rgb color from 'function.js'
     const rgb = generateRandomColor();
     card.addEventListener("mouseover", function() {
         card.style.backgroundColor = rgb;
     })
     card.addEventListener("mouseout", function() {
-        card.style.backgroundColor = "white";
+        card.style.backgroundColor = "inherit";
     })
 }
